@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <div id="Header">
+    <h1>Cloud Computing Infrastructure</h1>
+    <h2>Cliff Harris's Assignment Portfolio</h2>
+  </div>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Module 1</h1>
+
+<table style="margin-left: 4%">
+  <thead>
+    <tr>
+      <th>Assignment Name</th>
+      <th>Source</th>
+      <th>File</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignments.where(course_module_id: 1).find_each do |assignment| %>
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= assignment.assignment_source %></td>
+        <td><%= link_to assignment.assignment_file, asset_path(assignment.assignment_file), target: '_blank' %></td>
+        <% if false %>
+            <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+            <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Module 2</h1>
+
+<table style="margin-left: 4%">
+  <thead>
+  <tr>
+    <th>Assignment Name</th>
+    <th>Source</th>
+    <th>File</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @assignments.where(course_module_id: 2).find_each do |assignment| %>
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= assignment.assignment_source %></td>
+        <td><%= link_to assignment.assignment_file, asset_path(assignment.assignment_file), target: '_blank' %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Module 3</h1>
+
+<table style="margin-left: 4%">
+  <thead>
+  <tr>
+    <th>Assignment Name</th>
+    <th>Source</th>
+    <th>File</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @assignments.where(course_module_id: 3).find_each do |assignment| %>
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= assignment.assignment_source %></td>
+        <td><%= link_to assignment.assignment_file, asset_path(assignment.assignment_file), target: '_blank' %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Module 4</h1>
+
+<table style="margin-left: 4%">
+  <thead>
+  <tr>
+    <th>Assignment Name</th>
+    <th>Source</th>
+    <th>File</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @assignments.where(course_module_id: 4).find_each do |assignment| %>
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= assignment.assignment_source %></td>
+        <td><%= link_to assignment.assignment_file, asset_path(assignment.assignment_file), target: '_blank' %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if false %>
+<%= link_to 'New Assignment', new_assignment_path %>
+<% end %>
