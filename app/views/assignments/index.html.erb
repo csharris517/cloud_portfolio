@@ -18,10 +18,8 @@
         <td><%= assignment.name %></td>
         <td><%= assignment.assignment_source %></td>
         <td><%= link_to assignment.assignment_file, asset_path(assignment.assignment_file), target: '_blank' %></td>
-        <% if false %>
-            <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-            <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Delete', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>
@@ -110,6 +108,4 @@
 </table>
 
 <br>
-<% if false %>
 <%= link_to 'New Assignment', new_assignment_path %>
-<% end %>
